@@ -7,20 +7,112 @@
   </head>
 
   <body>
-    <img
-      src="./assets/logo.png"
-      style="
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 20px;
-        right: 40px;
-      "
-    />
+    <img class="main-icon" src="./assets/logo.png" />
+
     <div class="container">
-      <header>
-        <nav class="menu">
-          <ul>
+      <!-- Navigation bar -->
+      <header class="header">
+        <!-- Logo -->
+        <img
+          src="./assets/logo.png"
+          style="width: 50px; height: 50px; top: 20px; right: 40px"
+          class="logo"
+        />
+
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"
+          ><span class="hamb-line"></span
+        ></label>
+
+        <!-- Menu -->
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu_left">
+              <div class="dropdown">
+                <a onclick="toggleMegaMenu()" class="dropbtn" href="#home"
+                  >COLLECTION</a
+                >
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="submenu-nav">
+                    <ul>
+                      <li>Amadi Studio</li>
+                      <li>Kyoto</li>
+                      <li>Congo</li>
+                      <li>Kuba</li>
+                      <li>From & Function</li>
+                      <li>Heritage</li>
+                      <li>Nomad</li>
+                      <li>Decorative</li>
+                      <li>Fiji</li>
+                      <li>Adobe</li>
+                      <li>Ikat</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <li>Contemporary</li>
+                      <li>Modern Rugs</li>
+                      <li>Moroccan</li>
+                      <li>International Designers</li>
+                      <li>Antique Recreations</li>
+                      <li>Vintage Yarn</li>
+                      <li>Modern Flatweaves</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <li>Vintage</li>
+                      <li>Scandinavian</li>
+                      <li>Patchwork</li>
+                      <li>Vintage Persian</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <li>Antique</li>
+                      <li>Navajo</li>
+                      <li>Ushak</li>
+                      <li>Antique Persian</li>
+                      <li>Samarkand</li>
+                      <li>Chinese</li>
+                      <li>European</li>
+                      <li>Persian Tribal</li>
+                      <li>Amadi Archives</li>
+                      <li>view all</li>
+                    </ul>
+                  </div>
+                  <div class="submenu-img">
+                    <img src="./assets/img_4.png" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_left"><a href="#news">DISCOVER</a></li>
+            <li class="menu_left"><a href="#contact">SERVICES</a></li>
+            <li class="menu_left"><a href="#contact">CONTACT</a></li>
+            <li class="menu_right">
+              <a href="#searchby">SEARCH BY</a>
+            </li>
+            <li class="menu_right">
+              <a href="#about">ACCOUNT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--<header class="header">
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"
+          ><span class="hamb-line"></span
+        ></label>
+
+        <nav class="nav">
+          <ul class="menu">
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav">
+          <ul class="menu">
             <li class="menu_left">
               <a class="active" href="#home">COLLECT</a>
             </li>
@@ -35,7 +127,7 @@
             </li>
           </ul>
         </nav>
-      </header>
+      </header> -->
 
       <section class="section_slideshow">
         <div>

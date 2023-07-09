@@ -3,21 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <title>Amadi</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source Sans Pro"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Volkhov"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <img class="main-icon" src="./assets/logo.png" />
+    <a href="./index.html"><img class="main-icon" src="./assets/logo.png" /></a>
 
     <div class="container">
       <!-- Navigation bar -->
-      <header class="header">
+      <header class="menu-header">
         <!-- Logo -->
-        <img
-          src="./assets/logo.png"
-          style="width: 50px; height: 50px; top: 20px; right: 40px"
-          class="logo"
-        />
+        <a href="./index.html"
+          ><img
+            src="./assets/logo.png"
+            style="width: 50px; height: 50px; top: 20px; right: 40px"
+            class="menu-logo"
+        /></a>
 
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu" />
@@ -30,7 +39,10 @@
           <ul class="menu">
             <li class="menu_left">
               <div class="dropdown">
-                <a onclick="toggleMegaMenu()" class="dropbtn" href="#home"
+                <a
+                  onclick="toggleMegaMenu()"
+                  class="dropbtn"
+                  href="./index.html"
                   >COLLECTION</a
                 >
                 <div id="myDropdown" class="dropdown-content">
@@ -85,7 +97,7 @@
                 </div>
               </div>
             </li>
-            <li class="menu_left"><a href="#news">DISCOVER</a></li>
+            <li class="menu_left"><a href="./discover.html">DISCOVER</a></li>
             <li class="menu_left"><a href="#contact">SERVICES</a></li>
             <li class="menu_left"><a href="#contact">CONTACT</a></li>
             <li class="menu_right">
@@ -97,58 +109,43 @@
           </ul>
         </nav>
       </header>
-      <!--<header class="header">
-        <input class="side-menu" type="checkbox" id="side-menu" />
-        <label class="hamb" for="side-menu"
-          ><span class="hamb-line"></span
-        ></label>
-
-        <nav class="nav">
-          <ul class="menu">
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </nav>
-
-        <nav class="nav">
-          <ul class="menu">
-            <li class="menu_left">
-              <a class="active" href="#home">COLLECT</a>
-            </li>
-            <li class="menu_left"><a href="#news">DISCOVER</a></li>
-            <li class="menu_left"><a href="#contact">SERVICES</a></li>
-            <li class="menu_left"><a href="#contact">CONTACT</a></li>
-            <li class="menu_right" style="float: right">
-              <a href="#searchby">SEARCH BY</a>
-            </li>
-            <li class="menu_right" style="float: right">
-              <a href="#about">ACCOUNT</a>
-            </li>
-          </ul>
-        </nav>
-      </header> -->
 
       <section class="section_slideshow">
-        <div>
-          <ul>
-            <li style="width: 50%; text-align: center">
-              <div>
-                <div>AMADI CARPETS</div>
-                <div>Explore our Studio Collection.</div>
+        <div style="display: flex; flex-direction: row">
+          <div class="section_slideshow-left">
+            <div style="font-family: 'Volkhov', sans-serif">AMADI CARPETS</div>
+            <div>Explore our Studio Collection.</div>
+          </div>
+
+          <div class="section_slideshow-img">
+            <img src="./assets/img_2.png" />
+            <div
+              class="section_slideshow-caption"
+              style="
+                background-color: #687872;
+                color: white;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+              "
+            >
+              <div style="font-family: 'Volkhov', sans-serif">
+                AMADI CARPETS
               </div>
-            </li>
-            <li style="width: 50%">
-              <img src="./assets/img_2.png" />
-            </li>
-          </ul>
+              <div>Explore our Studio Collection.</div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section_discover">
         <ul>
           <li>
-            <a> Discover our collection </a>
+            <a class="header-text header-text-colored"> Discover </a>
+            <a class="header-text"> our collection </a>
           </li>
           <li class="discover_entry">
             <div>
@@ -187,7 +184,7 @@
               />
             </div>
             <div style="padding-right: 5%; padding-top: 50px">
-              <h2>Designed to reinvent Modern Interior</h2>
+              <a class="header-text"> Designed to reinvent Modern Interior</a>
               <div>
                 Whilst the mystery o f Polynesian art is still being unravelled,
                 bold symbols, animalistic figures, and large symmetrical
@@ -197,8 +194,9 @@
             </div>
           </li>
           <li style="width: 40%">
-            <div style="padding-left: 5%">
-              <h2 style="padding-top: 50px">Amadi Studio</h2>
+            <div style="padding-left: 5%; padding-top: 50px">
+              <a class="header-text header-text-italic"> Amadi </a
+              ><a class="header-text"> Studio </a>
               <div style="padding-bottom: 50px">
                 High quality hand-made rugs. Made from natural fibres and
                 ethically produced in Afganistan.
@@ -215,7 +213,8 @@
       <section class="section_justin">
         <ul>
           <li>
-            <a> Just In </a>
+            <a class="header-text header-text-italic"> Just </a
+            ><a class="header-text"> in </a>
           </li>
           <li class="justin_entry">
             <div>
@@ -255,9 +254,10 @@
             </li>
             <li style="width: 30%; padding-left: 50px">
               <div>
-                <h2>Upcoming Events</h2>
+                <a class="header-text header-text-italic"> Upcoming </a
+                ><a class="header-text"> Events </a>
               </div>
-              <div>
+              <div style="padding-top: 20px">
                 High Point Market, NC October 22nd-26th Verellen Showroom 515 S.
                 Hamilton St. Highpoint, NC 27260
               </div>
@@ -285,12 +285,25 @@
       <footer class="section_footer">
         <ul>
           <li style="width: 50%">
-            <div class="impressum">
-              <h1>AMADI</h1>
-              <p>408 N. Robertson Blvd</p>
-              <p>West Hollywood, CA 90048 United States</p>
-              <p>T: +1 310.659.5353</p>
-              <p>© 2022 Amadi Carpets</p>
+            <div
+              class="impressum"
+              style="display: flex; flex-direction: column; font-size: 0.75em"
+            >
+              <img src="./assets/footer_icon.png" style="width: 120px" />
+              <div
+                style="
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                  display: flex;
+                  flex-direction: column;
+                "
+              >
+                <a>408 N. Robertson Blvd</a>
+                <a>West Hollywood</a>
+                <a>CA 90048 United States</a>
+              </div>
+              <a>T: +1 310.659.5353</a>
+              <a style="padding-top: 20px">© 2022 Amadi Carpets</a>
             </div>
           </li>
           <li style="width: 50%">
@@ -314,9 +327,15 @@
                   <li><a href="#">Facebook</a></li>
                   <li><a href="#">Newsletter</a></li>
                   <li><a href="#">Look book SS 2022</a></li>
-                  <li><a href="#">Terms & Conditions</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Cookie Policy</a></li>
+                  <li>
+                    <a href="#" style="font-weight: bold">Terms & Conditions</a>
+                  </li>
+                  <li>
+                    <a href="#" style="font-weight: bold">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" style="font-style: italic">Cookie Policy</a>
+                  </li>
                 </ul>
               </li>
             </ul>

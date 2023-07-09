@@ -5,11 +5,26 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   background: #f5f5f5;
   border-radius: 0px;
+}
+
+.header-text {
+  font-size: 1.875em;
+}
+
+.header-text-colored {
+  color: #9387a3;
+  font-weight: bold;
+}
+
+.header-text-italic {
+  font-family: "Volkhov", sans-serif;
+  color: #9387a3;
+  font-style: italic;
 }
 
 .main-icon {
@@ -45,6 +60,19 @@ ul {
   display: block;
   object-fit: contain;
   width: 100%;
+}
+
+.section_slideshow-left {
+  display: none;
+}
+
+.section_slideshow-img {
+  width: 100%;
+  position: relative;
+}
+
+.section_slideshow-caption {
+  display: block;
 }
 
 .section_discover li {
@@ -125,25 +153,28 @@ footer li {
 
 .footer_list li {
   float: none;
+  padding-bottom: 10px;
 }
 
-/* Header */
-.header {
+.footer_list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-header {
   background-color: #c8c8c8;
   position: sticky;
   top: 0;
   width: 100%;
 }
 
-/* Logo */
-.logo {
+.menu-logo {
   display: inline-block;
   color: var(--white);
   font-size: 60px;
   margin-left: 10px;
 }
 
-/* Nav menu */
 .nav {
   width: 100%;
   height: 100%;
@@ -232,7 +263,6 @@ footer li {
   top: 0;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   background-color: #f5f5f5;
@@ -241,19 +271,11 @@ footer li {
   z-index: 1;
 }
 
-/* Mega Menu header, if needed */
-.dropdown-content .header {
-  background: red;
-  padding: 16px;
-  color: white;
-}
-
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
 }
 
-/* Create three equal columns that floats next to each other */
 .column {
   float: left;
   width: 33.33%;
@@ -262,7 +284,6 @@ footer li {
   height: 250px;
 }
 
-/* Style links inside the columns */
 .column a {
   float: none;
   color: black;
@@ -272,12 +293,10 @@ footer li {
   text-align: left;
 }
 
-/* Add a background color on hover */
 .column a:hover {
   text-decoration: underline;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -295,11 +314,6 @@ footer li {
 
 .submenu-img {
   display: none;
-}
-
-.submenu-nav ul {
-  /* width: 25%; */
-  /* float: left; */
 }
 
 .submenu-nav ul li:first-child {
@@ -324,16 +338,14 @@ footer li {
     max-height: none;
     top: 0;
     position: static;
-    /* float: right; */
-    /* width: fit-content; */
     background-color: transparent;
   }
 
-  .header {
+  .menu-header {
     background-color: #f5f5f5;
   }
 
-  .logo {
+  .menu-logo {
     display: none;
   }
 
@@ -390,11 +402,20 @@ footer li {
     float: left;
   }
 
-  /*.menu li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.menu .active {
-  background-color: #04aa6d;
-} */
+  .section_slideshow-left {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #687872;
+    color: #ffffff;
+  }
+  .section_slideshow-img {
+    width: 50%;
+    position: relative;
+  }
+  .section_slideshow-caption {
+    display: none;
+  }
 }

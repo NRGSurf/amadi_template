@@ -15,6 +15,8 @@
   </head>
 
   <body>
+    <div id="menu-background" class="menu-background"></div>
+
     <a href="./index.html"><img class="main-icon" src="./assets/logo.png" /></a>
 
     <div class="container">
@@ -39,16 +41,12 @@
           <ul class="menu">
             <li class="menu_left">
               <div class="dropdown">
-                <a
-                  onclick="toggleMegaMenu()"
-                  class="dropbtn"
-                  href="./index.html"
-                  >COLLECTION</a
-                >
+                <a onclick="toggleMegaMenu()" class="dropbtn">COLLECTION</a>
                 <div id="myDropdown" class="dropdown-content">
                   <div class="submenu-nav">
                     <ul>
-                      <li>Amadi Studio</li>
+                      <?=$this->menu_list1?>
+                      <!-- <li>Amadi Studio</li>
                       <li>Kyoto</li>
                       <li>Congo</li>
                       <li>Kuba</li>
@@ -59,9 +57,10 @@
                       <li>Fiji</li>
                       <li>Adobe</li>
                       <li>Ikat</li>
-                      <li>view all</li>
+                      <li>view all</li> -->
                     </ul>
                     <ul>
+                      <!-- <?=$this->menu_list2?> -->
                       <li>Contemporary</li>
                       <li>Modern Rugs</li>
                       <li>Moroccan</li>
@@ -72,6 +71,7 @@
                       <li>view all</li>
                     </ul>
                     <ul>
+                      <!-- <?=$this->menu_list3?> -->
                       <li>Vintage</li>
                       <li>Scandinavian</li>
                       <li>Patchwork</li>
@@ -79,6 +79,7 @@
                       <li>view all</li>
                     </ul>
                     <ul>
+                      <!-- <?=$this->menu_list4?> -->
                       <li>Antique</li>
                       <li>Navajo</li>
                       <li>Ushak</li>
@@ -111,80 +112,188 @@
       </header>
 
       <section class="section_slideshow">
-        <div style="display: flex; flex-direction: row">
-          <div class="section_slideshow-left">
-            <div style="font-family: 'Volkhov', sans-serif">AMADI CARPETS</div>
-            <div>Explore our Studio Collection.</div>
-          </div>
-
-          <div class="section_slideshow-img">
-            <img src="./assets/img_2.png" />
+        <div class="mySlides fade">
+          <div style="display: flex; flex-direction: row">
             <div
-              class="section_slideshow-caption"
-              style="
-                background-color: #687872;
-                color: white;
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                text-align: center;
-                padding-top: 20px;
-                padding-bottom: 20px;
-              "
+              class="section_slideshow-left"
+              style="background-color: #687872"
             >
               <div style="font-family: 'Volkhov', sans-serif">
                 AMADI CARPETS
               </div>
               <div>Explore our Studio Collection.</div>
             </div>
+
+            <div class="section_slideshow-img">
+              <img src="./assets/img_2.png" />
+              <div
+                class="section_slideshow-caption"
+                style="
+                  background-color: #687872;
+                  color: white;
+                  position: absolute;
+                  bottom: 0px;
+                  width: 100%;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                "
+              >
+                <div style="font-family: 'Volkhov', sans-serif">
+                  AMADI CARPETS
+                </div>
+                <div>Explore our Studio Collection.</div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="mySlides fade">
+          <div style="display: flex; flex-direction: row">
+            <div
+              class="section_slideshow-left"
+              style="background-color: #787768"
+            >
+              <div style="font-family: 'Volkhov', sans-serif">
+                AMADI CARPETS
+              </div>
+              <div>Explore our Studio Collection.</div>
+            </div>
+
+            <div class="section_slideshow-img">
+              <img src="./assets/img_2.png" />
+              <div
+                class="section_slideshow-caption"
+                style="
+                  background-color: #787768;
+                  color: white;
+                  position: absolute;
+                  bottom: 0px;
+                  width: 100%;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                "
+              >
+                <div style="font-family: 'Volkhov', sans-serif">
+                  AMADI CARPETS
+                </div>
+                <div>Explore our Studio Collection.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div style="display: flex; flex-direction: row">
+            <div
+              class="section_slideshow-left"
+              style="background-color: #686a78"
+            >
+              <div style="font-family: 'Volkhov', sans-serif">
+                AMADI CARPETS
+              </div>
+              <div>Explore our Studio Collection.</div>
+            </div>
+
+            <div class="section_slideshow-img">
+              <img src="./assets/img_2.png" />
+              <div
+                class="section_slideshow-caption"
+                style="
+                  background-color: #686a78;
+                  color: white;
+                  position: absolute;
+                  bottom: 0px;
+                  width: 100%;
+                  text-align: center;
+                  padding-top: 20px;
+                  padding-bottom: 20px;
+                "
+              >
+                <div style="font-family: 'Volkhov', sans-serif">
+                  AMADI CARPETS
+                </div>
+                <div>Explore our Studio Collection.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
 
       <section class="section_discover">
-        <ul>
-          <li>
+        <div class="section_discover-desktop">
+          <ul>
+            <li>
+              <a class="header-text header-text-colored"> Discover </a>
+              <a class="header-text"> our collection </a>
+            </li>
+            <li class="discover_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+            </li>
+            <li class="discover_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+            </li>
+            <li class="discover_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+            </li>
+            <li class="discover_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="section_discover-mobile">
+          <div class="section_discover-mobile-header">
             <a class="header-text header-text-colored"> Discover </a>
             <a class="header-text"> our collection </a>
-          </li>
-          <li class="discover_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="discover_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="discover_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="discover_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <img src="./assets/img_3.png" />
+          <div
+            class="section_discover-caption"
+            style="
+              background-color: #687872;
+              color: white;
+              position: absolute;
+              bottom: 0px;
+              width: 100%;
+              text-align: center;
+              padding-top: 20px;
+              padding-bottom: 20px;
+            "
+          >
+            <a> Text </a>
+          </div>
+        </div>
       </section>
 
       <section class="section_design">
-        <ul>
-          <li style="width: 60%">
-            <div style="padding-right: 25%">
+        <div class="section_design-container">
+          <div class="section_design-first">
+            <div class="section_design-img-desktop">
               <img
                 src="./assets/img_1.png"
                 style="display: block; object-fit: contain; width: 100%"
               />
             </div>
-            <div style="padding-right: 5%; padding-top: 50px">
-              <a class="header-text"> Designed to reinvent Modern Interior</a>
+            <div style="padding-top: 50px">
+              <div style="margin-bottom: 10px">
+                <a class="header-text"> Designed to reinvent Modern Interior</a>
+              </div>
               <div>
                 Whilst the mystery o f Polynesian art is still being unravelled,
                 bold symbols, animalistic figures, and large symmetrical
@@ -192,104 +301,162 @@
                 workship.
               </div>
             </div>
-          </li>
-          <li style="width: 40%">
-            <div style="padding-left: 5%; padding-top: 50px">
-              <a class="header-text header-text-italic"> Amadi </a
-              ><a class="header-text"> Studio </a>
-              <div style="padding-bottom: 50px">
-                High quality hand-made rugs. Made from natural fibres and
-                ethically produced in Afganistan.
-              </div>
+            <div class="section_design-img-mobile">
               <img
-                src="./assets/img_2.png"
+                src="./assets/img_1.png"
                 style="display: block; object-fit: contain; width: 100%"
               />
             </div>
-          </li>
-        </ul>
+          </div>
+          <div class="section_design-second">
+            <div style="margin-bottom: 10px">
+              <a class="header-text header-text-italic"> Amadi </a>
+              <a class="header-text"> Studio </a>
+            </div>
+            <div style="padding-bottom: 50px">
+              High quality hand-made rugs. Made from natural fibres and
+              ethically produced in Afganistan.
+            </div>
+            <img
+              src="./assets/img_2.png"
+              style="display: block; object-fit: contain; width: 100%"
+            />
+          </div>
+        </div>
       </section>
 
       <section class="section_justin">
-        <ul>
-          <li>
-            <a class="header-text header-text-italic"> Just </a
-            ><a class="header-text"> in </a>
-          </li>
-          <li class="justin_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="justin_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="justin_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-          <li class="justin_entry">
-            <div>
-              <img src="./assets/img_3.png" />
-              <div style="padding: 5px 0px 0px 0px">Test</div>
-            </div>
-          </li>
-        </ul>
+        <div class="section_justin-desktop">
+          <ul>
+            <li>
+              <a class="header-text header-text-italic"> Just </a
+              ><a class="header-text"> in </a>
+            </li>
+            <li class="justin_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Test</div>
+              </div>
+            </li>
+            <li class="justin_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Test</div>
+              </div>
+            </li>
+            <li class="justin_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Test</div>
+              </div>
+            </li>
+            <li class="justin_entry">
+              <div>
+                <img src="./assets/img_3.png" />
+                <div style="padding: 5px 0px 0px 0px">Test</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="section_justin-mobile">
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              flex-direction: row;
+              text-align: center;
+              margin-bottom: 30px;
+            "
+          >
+            <a
+              class="header-text header-text-colored"
+              style="margin-right: 5px"
+            >
+              Just
+            </a>
+            <a class="header-text"> in </a>
+          </div>
+          <img src="./assets/img_3.png" />
+          <div
+            class="section_justin-caption"
+            style="
+              background-color: #687872;
+              color: white;
+              position: absolute;
+              bottom: 0px;
+              width: 100%;
+              text-align: center;
+              padding-top: 20px;
+              padding-bottom: 20px;
+            "
+          >
+            <a> Text </a>
+          </div>
+        </div>
       </section>
 
       <section class="section_events">
-        <div style="padding-bottom: 30px">
-          <ul>
-            <li style="width: 30%">
+        <?=$this->event_list?>
+        <!-- <div style="padding-bottom: 30px">
+          <div class="section_events-event">
+            <div class="section_events-header-mobile">
+              <a class="header-text header-text-italic"> Upcoming </a
+              ><a class="header-text"> Events </a>
+            </div>
+            <div class="section_events-img">
               <img
                 src="./assets/img_1.png"
                 style="display: block; object-fit: contain; width: 100%"
               />
-            </li>
-            <li style="width: 30%; padding-left: 50px">
-              <div>
+            </div>
+            <div class="section_events-text">
+              <div class="section_events-header-desktop">
                 <a class="header-text header-text-italic"> Upcoming </a
                 ><a class="header-text"> Events </a>
               </div>
-              <div style="padding-top: 20px">
-                High Point Market, NC October 22nd-26th Verellen Showroom 515 S.
-                Hamilton St. Highpoint, NC 27260
+              <div style="display: flex; flex-direction: column">
+                <a>High Point Market</a>
+                <a>NC October 22nd-26th</a>
+                <a>Verellen Showroom 515 S.</a>
+                <a>Hamilton St. Highpoint</a>
+                <a>NC 27260</a>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
         <div>
-          <ul>
-            <li style="width: 30%">
+          <div class="section_events-event">
+            <div class="section_events-img">
               <img
                 src="./assets/img_1.png"
                 style="display: block; object-fit: contain; width: 100%"
               />
-            </li>
-            <li style="width: 30%; padding-left: 50px">
-              <div>
-                Round Top Antique Fair, TX October 14th-30th The Pink Barn Bla
-                Bla Street. Roundtop, TX 78954
+            </div>
+            <div class="section_events-text">
+              <div style="display: flex; flex-direction: column">
+                <a>Round Top Antique Fair</a>
+                <a>TX October 14th-30th</a>
+                <a>The Pink Barn Bla</a>
+                <a>Bla Street. Roundtop</a>
+                <a>TX 78954</a>
               </div>
-            </li>
-          </ul>
-        </div>
+            </div>
+          </div>
+        </div> -->
       </section>
 
       <footer class="section_footer">
-        <ul>
-          <li style="width: 50%">
+        <div class="section_footer-container">
+          <div class="section_footer-section">
             <div
               class="impressum"
               style="display: flex; flex-direction: column; font-size: 0.75em"
             >
-              <img src="./assets/footer_icon.png" style="width: 120px" />
+              <img
+                class="section_footer-img"
+                src="./assets/footer_icon.png"
+                style="width: 120px"
+              />
               <div
                 style="
                   padding-top: 20px;
@@ -303,12 +470,17 @@
                 <a>CA 90048 United States</a>
               </div>
               <a>T: +1 310.659.5353</a>
-              <a style="padding-top: 20px">© 2022 Amadi Carpets</a>
+              <div
+                class="section_footer-copyright-desktop"
+                style="padding-top: 20px"
+              >
+                <a>© 2022 Amadi Carpets</a>
+              </div>
             </div>
-          </li>
-          <li style="width: 50%">
-            <ul>
-              <li style="width: 50%">
+          </div>
+          <div class="section_footer-section">
+            <div class="section_footer-links">
+              <div class="section_footer-links-section">
                 <ul class="footer_list">
                   <li><a href="#">Collections</a></li>
                   <li><a href="#">Discover</a></li>
@@ -320,8 +492,8 @@
                   <li><a href="#">Account</a></li>
                   <li><a href="#">Search by...</a></li>
                 </ul>
-              </li>
-              <li style="width: 50%">
+              </div>
+              <div class="section_footer-links-section">
                 <ul class="footer_list">
                   <li><a href="#">Instagram</a></li>
                   <li><a href="#">Facebook</a></li>
@@ -337,10 +509,16 @@
                     <a href="#" style="font-style: italic">Cookie Policy</a>
                   </li>
                 </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="section_footer-copyright-mobile"
+            style="padding-top: 20px"
+          >
+            <a>© 2022 Amadi Carpets</a>
+          </div>
+        </div>
       </footer>
     </div>
     <script src="script.js"></script>

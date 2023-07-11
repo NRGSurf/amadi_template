@@ -1,0 +1,36 @@
+<? foreach( $this->items as $item => $url ): ?>
+<a href="<?=$url?>"><?=$item?></a>
+<div style="padding-bottom: 30px">
+  <div class="section_events-event">
+    <? if( $item ==  0): ?>
+    <!-- only the first element -->
+    <div class="section_events-header-mobile">
+      <a class="header-text header-text-italic"> Upcoming </a
+      ><a class="header-text"> Events </a>
+    </div>
+    <? endif ;?>
+    <div class="section_events-img">
+      <img
+        src="<?=$img_url?>"
+        style="display: block; object-fit: contain; width: 100%"
+      />
+    </div>
+    <div class="section_events-text">
+      <? if( $item ==  0): ?>
+      <!-- only the first element -->
+      <div class="section_events-header-desktop">
+        <a class="header-text header-text-italic"> Upcoming </a
+        ><a class="header-text"> Events </a>
+      </div>
+      <? endif ;?>
+      <div style="display: flex; flex-direction: column">
+        <a><?=$address_first?></a>
+        <a><?=$address_second?></a>
+        <a><?=$address_third?></a>
+        <a><?=$address_forth?></a>
+        <a><?=$address_fifth?></a>
+      </div>
+    </div>
+  </div>
+</div>
+<? endforeach ;?>

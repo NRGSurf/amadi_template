@@ -45,8 +45,8 @@
                 <div id="myDropdown" class="dropdown-content">
                   <div class="submenu-nav">
                     <ul>
-                      <?=$this->menu_list1?>
-                      <!-- <li>Amadi Studio</li>
+                      <!-- <?=$this->menu_list1?> -->
+                      <li>Amadi Studio</li>
                       <li>Kyoto</li>
                       <li>Congo</li>
                       <li>Kuba</li>
@@ -57,7 +57,7 @@
                       <li>Fiji</li>
                       <li>Adobe</li>
                       <li>Ikat</li>
-                      <li>view all</li> -->
+                      <li>view all</li>
                     </ul>
                     <ul>
                       <!-- <?=$this->menu_list2?> -->
@@ -112,115 +112,92 @@
       </header>
 
       <section class="section_slideshow">
-        <div class="mySlides fade">
-          <div style="display: flex; flex-direction: row">
-            <div
-              class="section_slideshow-left"
-              style="background-color: #687872"
-            >
-              <div style="font-family: 'Volkhov', sans-serif">
-                AMADI CARPETS
-              </div>
-              <div>Explore our Studio Collection.</div>
-            </div>
-
-            <div class="section_slideshow-img">
-              <img src="./assets/img_2.png" />
+        <div class="slideshow-container">
+          <div class="mySlides1 fade">
+            <div style="display: flex; flex-direction: row">
               <div
-                class="section_slideshow-caption"
-                style="
-                  background-color: #687872;
-                  color: white;
-                  position: absolute;
-                  bottom: 0px;
-                  width: 100%;
-                  text-align: center;
-                  padding-top: 20px;
-                  padding-bottom: 20px;
-                "
+                class="section_slideshow-left"
+                style="background-color: #687872"
               >
                 <div style="font-family: 'Volkhov', sans-serif">
                   AMADI CARPETS
                 </div>
                 <div>Explore our Studio Collection.</div>
               </div>
+
+              <div class="section_slideshow-img">
+                <img src="./assets/img_2.png" />
+                <div
+                  class="section_slideshow-caption"
+                  style="background-color: #687872"
+                >
+                  <div style="font-family: 'Volkhov', sans-serif">
+                    AMADI CARPETS
+                  </div>
+                  <div>Explore our Studio Collection.</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mySlides fade">
-          <div style="display: flex; flex-direction: row">
-            <div
-              class="section_slideshow-left"
-              style="background-color: #787768"
-            >
-              <div style="font-family: 'Volkhov', sans-serif">
-                AMADI CARPETS
-              </div>
-              <div>Explore our Studio Collection.</div>
-            </div>
-
-            <div class="section_slideshow-img">
-              <img src="./assets/img_2.png" />
+          <div class="mySlides1 fade">
+            <div style="display: flex; flex-direction: row">
               <div
-                class="section_slideshow-caption"
-                style="
-                  background-color: #787768;
-                  color: white;
-                  position: absolute;
-                  bottom: 0px;
-                  width: 100%;
-                  text-align: center;
-                  padding-top: 20px;
-                  padding-bottom: 20px;
-                "
+                class="section_slideshow-left"
+                style="background-color: #787768"
               >
                 <div style="font-family: 'Volkhov', sans-serif">
                   AMADI CARPETS
                 </div>
                 <div>Explore our Studio Collection.</div>
               </div>
+
+              <div class="section_slideshow-img">
+                <img src="./assets/img_2.png" />
+                <div
+                  class="section_slideshow-caption"
+                  style="background-color: #787768"
+                >
+                  <div style="font-family: 'Volkhov', sans-serif">
+                    AMADI CARPETS
+                  </div>
+                  <div>Explore our Studio Collection.</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="mySlides fade">
-          <div style="display: flex; flex-direction: row">
-            <div
-              class="section_slideshow-left"
-              style="background-color: #686a78"
-            >
-              <div style="font-family: 'Volkhov', sans-serif">
-                AMADI CARPETS
-              </div>
-              <div>Explore our Studio Collection.</div>
-            </div>
-
-            <div class="section_slideshow-img">
-              <img src="./assets/img_2.png" />
+          <div class="mySlides1 fade">
+            <div style="display: flex; flex-direction: row">
               <div
-                class="section_slideshow-caption"
-                style="
-                  background-color: #686a78;
-                  color: white;
-                  position: absolute;
-                  bottom: 0px;
-                  width: 100%;
-                  text-align: center;
-                  padding-top: 20px;
-                  padding-bottom: 20px;
-                "
+                class="section_slideshow-left"
+                style="background-color: #686a78"
               >
                 <div style="font-family: 'Volkhov', sans-serif">
                   AMADI CARPETS
                 </div>
                 <div>Explore our Studio Collection.</div>
               </div>
+
+              <div class="section_slideshow-img">
+                <img src="./assets/img_2.png" />
+                <div
+                  class="section_slideshow-caption"
+                  style="background-color: #686a78"
+                >
+                  <div style="font-family: 'Volkhov', sans-serif">
+                    AMADI CARPETS
+                  </div>
+                  <div>Explore our Studio Collection.</div>
+                </div>
+              </div>
             </div>
           </div>
+          <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
         </div>
         <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot dot0" onclick="currentSlide(1, 0)"></span>
+          <span class="dot dot0" onclick="currentSlide(2, 0)"></span>
+          <span class="dot dot0" onclick="currentSlide(3, 0)"></span>
         </div>
       </section>
 
@@ -262,28 +239,46 @@
             <a class="header-text header-text-colored"> Discover </a>
             <a class="header-text"> our collection </a>
           </div>
-          <img src="./assets/img_3.png" />
-          <div
-            class="section_discover-caption"
-            style="
-              background-color: #687872;
-              color: white;
-              position: absolute;
-              bottom: 0px;
-              width: 100%;
-              text-align: center;
-              padding-top: 20px;
-              padding-bottom: 20px;
-            "
-          >
-            <a> Text </a>
+          <div class="slideshow-container">
+            <div class="mySlides2 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_discover-caption">
+                <a> Text 1 </a>
+              </div>
+            </div>
+            <div class="mySlides2 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_discover-caption">
+                <a> Text 2 </a>
+              </div>
+            </div>
+            <div class="mySlides2 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_discover-caption">
+                <a> Text 3 </a>
+              </div>
+            </div>
+            <div class="mySlides2 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_discover-caption">
+                <a> Text 4 </a>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+          </div>
+          <div style="text-align: center">
+            <span class="dot dot1" onclick="currentSlide(1, 1)"></span>
+            <span class="dot dot1" onclick="currentSlide(2, 1)"></span>
+            <span class="dot dot1" onclick="currentSlide(3, 1)"></span>
+            <span class="dot dot1" onclick="currentSlide(4, 1)"></span>
           </div>
         </div>
       </section>
 
       <section class="section_design">
         <div class="section_design-container">
-          <div class="section_design-first">
+          <div class="section_design-first reveal reveal-left">
             <div class="section_design-img-desktop">
               <img
                 src="./assets/img_1.png"
@@ -308,7 +303,7 @@
               />
             </div>
           </div>
-          <div class="section_design-second">
+          <div class="section_design-second reveal reveal-right">
             <div style="margin-bottom: 10px">
               <a class="header-text header-text-italic"> Amadi </a>
               <a class="header-text"> Studio </a>
@@ -376,29 +371,47 @@
             </a>
             <a class="header-text"> in </a>
           </div>
-          <img src="./assets/img_3.png" />
-          <div
-            class="section_justin-caption"
-            style="
-              background-color: #687872;
-              color: white;
-              position: absolute;
-              bottom: 0px;
-              width: 100%;
-              text-align: center;
-              padding-top: 20px;
-              padding-bottom: 20px;
-            "
-          >
-            <a> Text </a>
+          <div class="slideshow-container">
+            <div class="mySlides3 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_justin-caption">
+                <a> Text 1 </a>
+              </div>
+            </div>
+            <div class="mySlides3 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_justin-caption">
+                <a> Text 2 </a>
+              </div>
+            </div>
+            <div class="mySlides3 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_justin-caption">
+                <a> Text 3 </a>
+              </div>
+            </div>
+            <div class="mySlides3 fade">
+              <img src="./assets/img_3.png" />
+              <div class="section_justin-caption">
+                <a> Text 4 </a>
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+          </div>
+          <div style="text-align: center">
+            <span class="dot dot2" onclick="currentSlide(1, 2)"></span>
+            <span class="dot dot2" onclick="currentSlide(2, 2)"></span>
+            <span class="dot dot2" onclick="currentSlide(3, 2)"></span>
+            <span class="dot dot2" onclick="currentSlide(4, 2)"></span>
           </div>
         </div>
       </section>
 
       <section class="section_events">
-        <?=$this->event_list?>
-        <!-- <div style="padding-bottom: 30px">
-          <div class="section_events-event">
+        <!-- <?=$this->event_list?> -->
+        <div style="padding-bottom: 30px">
+          <div class="section_events-event reveal reveal-up">
             <div class="section_events-header-mobile">
               <a class="header-text header-text-italic"> Upcoming </a
               ><a class="header-text"> Events </a>
@@ -425,7 +438,7 @@
           </div>
         </div>
         <div>
-          <div class="section_events-event">
+          <div class="section_events-event reveal reveal-up">
             <div class="section_events-img">
               <img
                 src="./assets/img_1.png"
@@ -442,7 +455,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </section>
 
       <footer class="section_footer">

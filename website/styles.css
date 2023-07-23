@@ -83,6 +83,13 @@ ul {
 
 .section_slideshow-caption {
   display: block;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .section_discover li {
@@ -129,6 +136,14 @@ ul {
 
 .section_discover-caption {
   display: block;
+  background-color: #687872;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .discover_entry img {
@@ -180,6 +195,14 @@ ul {
 
 .section_justin-caption {
   display: block;
+  background-color: #687872;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .section_justin li {
@@ -272,8 +295,52 @@ ul {
 }
 
 /* Slideshow */
-.mySlides {
+.mySlides1 {
   display: none;
+}
+
+.mySlides2 {
+  display: none;
+}
+
+.mySlides3 {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
@@ -488,6 +555,30 @@ footer li {
   font-style: italic;
 }
 
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.shown {
+  transform: translateY(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reveal-up {
+  transform: translateY(150px);
+}
+
+.reveal-right {
+  transform: translateY(150px);
+}
+
+.reveal-left {
+  transform: translateY(150px);
+}
+
 @media (min-width: 1000px) {
   .container {
     padding: 10px 100px;
@@ -677,5 +768,16 @@ footer li {
   }
   .dropdown-content {
     z-index: 99;
+  }
+
+  .reveal-right {
+    transform: translateX(150px);
+  }
+
+  .reveal-left {
+    transform: translateX(-150px);
+  }
+  .section_slideshow-caption {
+    padding-bottom: 20px;
   }
 }

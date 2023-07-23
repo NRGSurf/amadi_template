@@ -28,48 +28,51 @@ window.onclick = function (event) {
 };
 
 // Slideshow
-
-let slideIndex = 1;
-showSlides(slideIndex);
-// slideshowAutomation();
-let timeoutHandle = setTimeout(slideshowAutomation, 2000); // Change image every 2 seconds
+let slideIndex = [1, 1, 1];
+let slideId = ["mySlides1", "mySlides2", "mySlides3"];
+let dotId = ["dot0", "dot1", "dot2"];
+let timeoutHandle = null;
+let isAutomated = false;
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
 
 // Next/previous controls
-// function plusSlides(n) {
-//   showSlides((slideIndex += n));
-// }
-
-// Thumbnail image controls
-function currentSlide(n) {
+function plusSlides(n, no) {
   clearTimeout(timeoutHandle);
-  showSlides((slideIndex = n));
-  timeoutHandle = setTimeout(slideshowAutomation, 2000); // Change image every 2 seconds
+  showSlides((slideIndex[no] += n), no);
+  if (isAutomated === true) {
+    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+  }
+}
+
+function currentSlide(n, no) {
+  clearTimeout(timeoutHandle);
+  showSlides((slideIndex[no] = n), no);
+  if (isAutomated === true) {
+    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+  }
 }
 
 function slideshowAutomation() {
-  slideIndex++;
-  showSlides(slideIndex);
-  timeoutHandle = setTimeout(slideshowAutomation, 2000); // Change image every 2 seconds
+  for (var i = 0; i < slideIndex.length; i++) {
+    slideIndex[i]++;
+    showSlides(slideIndex[i], i);
+  }
+  if (isAutomated === true) {
+    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+  }
 }
 
-// function slideshowAutomation() {
-//   let dots = document.getElementsByClassName("dot");
-//   for (i = 0; i < dots.length; i++) {
-//     if (dots[i].classList.contains("active")) {
-//       showSlides((slideIndex = i + 2));
-//     }
-//   }
-// }
-
-function showSlides(n) {
+function showSlides(n, no) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName(slideId[no]);
+  let dots = document.getElementsByClassName(dotId[no]);
   if (n > slides.length) {
-    slideIndex = 1;
+    slideIndex[no] = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex[no] = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
@@ -77,6 +80,48 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides[slideIndex[no] - 1].style.display = "block";
+  dots[slideIndex[no] - 1].className += " active";
 }
+
+// Create a condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia("(min-width: 1000px)");
+
+function handleTabletChange(e) {
+  // Check if the media query is true
+  if (e.matches) {
+    // Then log the following message to the console
+    console.log("Media Query Matched!");
+    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+    isAutomated = true;
+  } else {
+    isAutomated = false;
+    if (timeoutHandle !== null) {
+      clearTimeout(timeoutHandle);
+    }
+  }
+}
+
+// Register event listener
+mediaQuery.addListener(handleTabletChange);
+
+// Initial check
+handleTabletChange(mediaQuery);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("shown");
+    } else {
+      reveals[i].classList.remove("shown");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);

@@ -1,11 +1,10 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+// ------- MENU -------
+
 function toggleMegaMenu() {
   document.getElementById("myDropdown").classList.toggle("show");
   document.getElementById("menu-background").classList.toggle("show");
 }
 
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -27,7 +26,8 @@ window.onclick = function (event) {
   }
 };
 
-// Slideshow
+// ------- Slideshow -------
+
 let slideIndex = [1, 1, 1];
 let slideId = ["mySlides1", "mySlides2", "mySlides3"];
 let dotId = ["dot0", "dot1", "dot2"];
@@ -86,13 +86,11 @@ function showSlides(n, no) {
   dots[slideIndex[no] - 1].className += " active";
 }
 
-// Create a condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia("(min-width: 600px)");
 
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
-    // Then log the following message to the console
     console.log("Media Query Matched!");
     timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
     isAutomated = true;
@@ -109,6 +107,8 @@ mediaQuery.addListener(handleTabletChange);
 
 // Initial check
 handleTabletChange(mediaQuery);
+
+// ----- function for DIV movements -----
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");

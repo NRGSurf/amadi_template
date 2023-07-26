@@ -86,11 +86,13 @@ function showSlides(n, no) {
   dots[slideIndex[no] - 1].className += " active";
 }
 
+// Create a condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia("(min-width: 600px)");
 
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
+    // Then log the following message to the console
     console.log("Media Query Matched!");
     timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
     isAutomated = true;

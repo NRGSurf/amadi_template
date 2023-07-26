@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amadi</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source Sans Pro"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Volkhov"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+
+  <body>
+    <div id="menu-background" class="menu-background"></div>
+
+    <a href="./index.html"><img class="main-icon" src="./assets/icon.png" /></a>
+
+    <div class="container">
+      <!-- Mobile Navigation bar -->
+      <header class="menu-header">
+        <a class="text-header">AMADI CARPETS</a>
+
+        <a href="./index.html"
+          ><img src="./assets/icon.png" class="menu-logo"
+        /></a>
+
+        <input class="side-menu" type="checkbox" id="side-menu" />
+        <label class="hamb" for="side-menu"
+          ><span class="hamb-line"></span
+        ></label>
+
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu_left">
+              <div class="dropdown">
+                <a onclick="toggleMegaMenu()" class="dropbtn">COLLECTION</a>
+                <div id="myDropdown" class="dropdown-content">
+                  <div class="submenu-nav">
+                    <ul>
+                      <!-- <?=$this->menu_list1?> -->
+                      <li>Amadi Studio</li>
+                      <li>Kyoto</li>
+                      <li>Congo</li>
+                      <li>Kuba</li>
+                      <li>From & Function</li>
+                      <li>Heritage</li>
+                      <li>Nomad</li>
+                      <li>Decorative</li>
+                      <li>Fiji</li>
+                      <li>Adobe</li>
+                      <li>Ikat</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <!-- <?=$this->menu_list2?> -->
+                      <li>Contemporary</li>
+                      <li>Modern Rugs</li>
+                      <li>Moroccan</li>
+                      <li>International Designers</li>
+                      <li>Antique Recreations</li>
+                      <li>Vintage Yarn</li>
+                      <li>Modern Flatweaves</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <!-- <?=$this->menu_list3?> -->
+                      <li>Vintage</li>
+                      <li>Scandinavian</li>
+                      <li>Patchwork</li>
+                      <li>Vintage Persian</li>
+                      <li>view all</li>
+                    </ul>
+                    <ul>
+                      <!-- <?=$this->menu_list4?> -->
+                      <li>Antique</li>
+                      <li>Navajo</li>
+                      <li>Ushak</li>
+                      <li>Antique Persian</li>
+                      <li>Samarkand</li>
+                      <li>Chinese</li>
+                      <li>European</li>
+                      <li>Persian Tribal</li>
+                      <li>Amadi Archives</li>
+                      <li>view all</li>
+                    </ul>
+                  </div>
+                  <div class="submenu-img">
+                    <img src="./assets/img_4.png" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu_left"><a href="#discover">DISCOVER</a></li>
+            <li class="menu_left"><a href="#contact">SERVICES</a></li>
+            <li class="menu_left"><a href="#contact">CONTACT</a></li>
+            <li class="menu_right">
+              <a href="#searchby">SEARCH BY</a>
+            </li>
+            <li class="menu_right">
+              <a href="#about">ACCOUNT</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="content-container">
+        <div style="width: 100%; display: flex; flex-direction: row">
+          <div style="display: flex; flex-direction: column; width: 25%">
+            <a>Amadi Studio</a>
+            <a>Contemporary</a>
+            <a>Vintage</a>
+            <a>Antique</a>
+          </div>
+          <div style="width: 75%">
+            <div style="margin-bottom: 10px">
+              <a class="header-text header-text-italic"> Amadi </a>
+              <a class="header-text"> Studio </a>
+            </div>
+            <div style="margin-bottom: 10px">
+              <a class="header-text"> Collection </a>
+            </div>
+            <div style="display: flex; flex-direction: row">
+              <div style="width: 24%; padding-right: 1%">
+                <img src="./assets/img_3.png" style="width: 100%" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+              <div style="width: 24%; padding-right: 1%">
+                <img src="./assets/img_3.png" style="width: 100%" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+              <div style="width: 24%; padding-right: 1%">
+                <img src="./assets/img_3.png" style="width: 100%" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+              <div style="width: 24%; padding-right: 1%">
+                <img src="./assets/img_3.png" style="width: 100%" />
+                <div style="padding: 5px 0px 0px 0px">Text</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="section_footer">
+          <div class="section_footer-container">
+            <div class="section_footer-section">
+              <div
+                class="impressum"
+                style="display: flex; flex-direction: column; font-size: 0.75em"
+              >
+                <img
+                  class="section_footer-img"
+                  src="./assets/footer_icon.png"
+                  style="width: 120px"
+                />
+                <div
+                  style="
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                  "
+                >
+                  <a>408 N. Robertson Blvd</a>
+                  <a>West Hollywood</a>
+                  <a>CA 90048 United States</a>
+                </div>
+                <a>T: +1 310.659.5353</a>
+                <div
+                  class="section_footer-copyright-desktop"
+                  style="padding-top: 20px"
+                >
+                  <a>© 2022 Amadi Carpets</a>
+                </div>
+              </div>
+            </div>
+            <div class="section_footer-section">
+              <div class="section_footer-links">
+                <div class="section_footer-links-section">
+                  <ul class="footer_list">
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="hide-mobile">
+                      <a> <br /></a>
+                    </li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Search by...</a></li>
+                  </ul>
+                </div>
+                <div class="section_footer-links-section">
+                  <ul class="footer_list">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Look book SS 2022</a></li>
+                    <li>
+                      <a href="#" style="font-weight: bold"
+                        >Terms & Conditions</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" style="font-weight: bold">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#" style="font-style: italic">Cookie Policy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="section_footer-copyright-mobile"
+              style="padding-top: 20px"
+            >
+              <a>© 2022 Amadi Carpets</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

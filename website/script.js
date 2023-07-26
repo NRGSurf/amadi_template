@@ -37,12 +37,14 @@ showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 
+const SLIDESHOW_INTERVALL = 3000;
+
 // Next/previous controls
 function plusSlides(n, no) {
   clearTimeout(timeoutHandle);
   showSlides((slideIndex[no] += n), no);
   if (isAutomated === true) {
-    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+    timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
   }
 }
 
@@ -50,7 +52,7 @@ function currentSlide(n, no) {
   clearTimeout(timeoutHandle);
   showSlides((slideIndex[no] = n), no);
   if (isAutomated === true) {
-    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+    timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
   }
 }
 
@@ -60,7 +62,7 @@ function slideshowAutomation() {
     showSlides(slideIndex[i], i);
   }
   if (isAutomated === true) {
-    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+    timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
   }
 }
 
@@ -85,14 +87,14 @@ function showSlides(n, no) {
 }
 
 // Create a condition that targets viewports at least 768px wide
-const mediaQuery = window.matchMedia("(min-width: 1000px)");
+const mediaQuery = window.matchMedia("(min-width: 600px)");
 
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
     // Then log the following message to the console
     console.log("Media Query Matched!");
-    timeoutHandle = setTimeout(slideshowAutomation, 2000);
+    timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
     isAutomated = true;
   } else {
     isAutomated = false;
@@ -114,7 +116,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 50;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("shown");

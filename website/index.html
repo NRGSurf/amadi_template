@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Amadi</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Source Sans Pro"
+      href="https://fonts.googleapis.com/css?family=Source Sans 3"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Volkhov"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/text.css" />
+    <link rel="stylesheet" href="styles/landing_page.css" />
+    <link rel="stylesheet" href="styles/slideshow.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
 
@@ -114,18 +118,15 @@
           <div class="slideshow-container">
             <div class="mySlides1 fade">
               <div style="display: flex; flex-direction: row">
+                <div class="section_slideshow-header">AMADI CARPETS</div>
                 <div
                   class="section_slideshow-left"
                   style="background-color: #687872"
                 >
-                  <div
-                    style="font-family: 'Volkhov', sans-serif; font-size: 30px"
-                  >
-                    AMADI CARPETS
-                  </div>
-                  <div style="font-size: 18px">
+                  <div class="section_slideshow-subheader">
                     Explore our Studio Collection.
                   </div>
+                  <div class="section_slideshow-button">Shop Now</div>
                 </div>
 
                 <div class="section_slideshow-img">
@@ -134,16 +135,12 @@
                     class="section_slideshow-caption"
                     style="background-color: #687872"
                   >
-                    <div
-                      style="
-                        font-family: 'Volkhov', sans-serif;
-                        font-size: 30px;
-                      "
-                    >
+                    <div style="font-family: 'Volkhov', sans-serif">
                       AMADI CARPETS
                     </div>
-                    <div style="font-size: 18px">
-                      Explore our Studio Collection.
+                    <div>Explore our Studio Collection.</div>
+                    <div style="display: flex; justify-content: center">
+                      <div class="section_slideshow-button">Shop Now</div>
                     </div>
                   </div>
                 </div>
@@ -151,18 +148,15 @@
             </div>
             <div class="mySlides1 fade">
               <div style="display: flex; flex-direction: row">
+                <div class="section_slideshow-header">AMADI CARPETS</div>
                 <div
                   class="section_slideshow-left"
                   style="background-color: #787768"
                 >
-                  <div
-                    style="font-family: 'Volkhov', sans-serif; font-size: 30px"
-                  >
-                    AMADI CARPETS
-                  </div>
-                  <div style="font-size: 18px">
+                  <div class="section_slideshow-subheader">
                     Explore our Studio Collection.
                   </div>
+                  <div class="section_slideshow-button">Shop Now</div>
                 </div>
 
                 <div class="section_slideshow-img">
@@ -175,24 +169,24 @@
                       AMADI CARPETS
                     </div>
                     <div>Explore our Studio Collection.</div>
+                    <div style="display: flex; justify-content: center">
+                      <div class="section_slideshow-button">Shop Now</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="mySlides1 fade">
               <div style="display: flex; flex-direction: row">
+                <div class="section_slideshow-header">AMADI CARPETS</div>
                 <div
                   class="section_slideshow-left"
                   style="background-color: #686a78"
                 >
-                  <div
-                    style="font-family: 'Volkhov', sans-serif; font-size: 30px"
-                  >
-                    AMADI CARPETS
-                  </div>
-                  <div style="font-size: 18px">
+                  <div class="section_slideshow-subheader">
                     Explore our Studio Collection.
                   </div>
+                  <div class="section_slideshow-button">Shop Now</div>
                 </div>
 
                 <div class="section_slideshow-img">
@@ -205,6 +199,9 @@
                       AMADI CARPETS
                     </div>
                     <div>Explore our Studio Collection.</div>
+                    <div style="display: flex; justify-content: center">
+                      <div class="section_slideshow-button">Shop Now</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -212,7 +209,7 @@
             <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
             <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
           </div>
-          <div style="text-align: center">
+          <div class="dots">
             <span class="dot dot0" onclick="currentSlide(1, 0)"></span>
             <span class="dot dot0" onclick="currentSlide(2, 0)"></span>
             <span class="dot dot0" onclick="currentSlide(3, 0)"></span>
@@ -225,6 +222,9 @@
               <li>
                 <a class="header-text header-text-colored"> Discover </a>
                 <a class="header-text"> our collection </a>
+                <div class="section_discover-button">
+                  <a href="test.html">Shop Collections</a>
+                </div>
               </li>
               <li class="discover_entry">
                 <div>
@@ -285,11 +285,16 @@
               <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
-            <div style="text-align: center">
+            <div class="dots">
               <span class="dot dot1" onclick="currentSlide(1, 1)"></span>
               <span class="dot dot1" onclick="currentSlide(2, 1)"></span>
               <span class="dot dot1" onclick="currentSlide(3, 1)"></span>
               <span class="dot dot1" onclick="currentSlide(4, 1)"></span>
+            </div>
+            <div style="display: flex; justify-content: center">
+              <button type="button" class="section_discover-button">
+                Shop Collections
+              </button>
             </div>
           </div>
         </section>
@@ -307,7 +312,10 @@
                 <div style="margin-bottom: 10px">
                   <a
                     class="header-text"
-                    style="font-family: 'Volkhov', sans-serif"
+                    style="
+                      font-family: 'Volkhov', sans-serif;
+                      font-size: 1.25em;
+                    "
                   >
                     Designed to reinvent Modern Interior</a
                   >
@@ -422,7 +430,7 @@
               <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
             </div>
-            <div style="text-align: center">
+            <div class="dots">
               <span class="dot dot2" onclick="currentSlide(1, 2)"></span>
               <span class="dot dot2" onclick="currentSlide(2, 2)"></span>
               <span class="dot dot2" onclick="currentSlide(3, 2)"></span>
@@ -481,15 +489,15 @@
           </div>
         </section>
 
-        <footer class="section_footer">
-          <div class="section_footer-container">
-            <div class="section_footer-section">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
               <div
                 class="impressum"
                 style="display: flex; flex-direction: column; font-size: 0.75em"
               >
                 <img
-                  class="section_footer-img"
+                  class="footer-img"
                   src="./assets/footer_icon.png"
                   style="width: 120px"
                 />
@@ -506,17 +514,14 @@
                   <a>CA 90048 United States</a>
                 </div>
                 <a>T: +1 310.659.5353</a>
-                <div
-                  class="section_footer-copyright-desktop"
-                  style="padding-top: 20px"
-                >
+                <div class="footer-copyright-desktop" style="padding-top: 20px">
                   <a>© 2022 Amadi Carpets</a>
                 </div>
               </div>
             </div>
-            <div class="section_footer-section">
-              <div class="section_footer-links">
-                <div class="section_footer-links-section">
+            <div class="footer-section">
+              <div class="footer-links">
+                <div class="footer-links-section">
                   <ul class="footer_list">
                     <li><a href="#">Collections</a></li>
                     <li><a href="#">Discover</a></li>
@@ -529,7 +534,7 @@
                     <li><a href="#">Search by...</a></li>
                   </ul>
                 </div>
-                <div class="section_footer-links-section">
+                <div class="footer-links-section">
                   <ul class="footer_list">
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
@@ -550,10 +555,7 @@
                 </div>
               </div>
             </div>
-            <div
-              class="section_footer-copyright-mobile"
-              style="padding-top: 20px"
-            >
+            <div class="footer-copyright-mobile" style="padding-top: 20px">
               <a>© 2022 Amadi Carpets</a>
             </div>
           </div>

@@ -64,7 +64,7 @@ function slideshowAutomation() {
     showSlides(slideIndex[i], i);
   }
   if (isAutomated === true) {
-    timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
+    //timeoutHandle = setTimeout(slideshowAutomation, SLIDESHOW_INTERVALL);
   }
 }
 

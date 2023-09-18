@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Amadi</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Source Sans Pro"
+      href="https://fonts.googleapis.com/css?family=Source Sans 3"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Volkhov"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styles_collection.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/text.css" />
+    <link rel="stylesheet" href="styles/landing_page.css" />
+    <link rel="stylesheet" href="styles/slideshow.css" />
+    <link rel="stylesheet" href="styles/collection_page.css" />
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
 
@@ -161,7 +165,7 @@
                 </a>
               </div>
             </div>
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+            <div class="gallery">
               <div class="list-element">
                 <img class="list-element-img" src="./assets/img_3.png" />
                 <div class="list-element-text">Text</div>
@@ -202,15 +206,15 @@
           </div>
         </div>
 
-        <footer class="section_footer">
-          <div class="section_footer-container">
-            <div class="section_footer-section">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-section">
               <div
                 class="impressum"
                 style="display: flex; flex-direction: column; font-size: 0.75em"
               >
                 <img
-                  class="section_footer-img"
+                  class="footer-img"
                   src="./assets/footer_icon.png"
                   style="width: 120px"
                 />
@@ -227,17 +231,14 @@
                   <a>CA 90048 United States</a>
                 </div>
                 <a>T: +1 310.659.5353</a>
-                <div
-                  class="section_footer-copyright-desktop"
-                  style="padding-top: 20px"
-                >
+                <div class="footer-copyright-desktop" style="padding-top: 20px">
                   <a>© 2022 Amadi Carpets</a>
                 </div>
               </div>
             </div>
-            <div class="section_footer-section">
-              <div class="section_footer-links">
-                <div class="section_footer-links-section">
+            <div class="footer-section">
+              <div class="footer-links">
+                <div class="footer-links-section">
                   <ul class="footer_list">
                     <li><a href="#">Collections</a></li>
                     <li><a href="#">Discover</a></li>
@@ -250,7 +251,7 @@
                     <li><a href="#">Search by...</a></li>
                   </ul>
                 </div>
-                <div class="section_footer-links-section">
+                <div class="footer-links-section">
                   <ul class="footer_list">
                     <li><a href="#">Instagram</a></li>
                     <li><a href="#">Facebook</a></li>
@@ -271,10 +272,7 @@
                 </div>
               </div>
             </div>
-            <div
-              class="section_footer-copyright-mobile"
-              style="padding-top: 20px"
-            >
+            <div class="footer-copyright-mobile" style="padding-top: 20px">
               <a>© 2022 Amadi Carpets</a>
             </div>
           </div>

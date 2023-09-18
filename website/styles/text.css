@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400,700&display=swap");
+
+body {
+  font-family: "Source Sans 3";
+}
+
+.header-text {
+  font-size: 1.5em;
+}
+
+.header-text-colored {
+  color: #9387a3;
+  font-weight: bold;
+}
+
+.header-text-italic {
+  font-family: "Volkhov", sans-serif;
+  color: #9387a3;
+  font-style: italic;
+}
+.text-header {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .text-header {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+}

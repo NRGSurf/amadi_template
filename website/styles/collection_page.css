@@ -4,7 +4,8 @@
 
 .right-pane {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .header {
@@ -36,6 +37,7 @@
 .list-element-text {
   padding: 0px 0px 5px 0px;
   text-align: center;
+  font-size: 0.75em;
 }
 
 .banner {
@@ -75,8 +77,19 @@
   text-align: center;
 }
 
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
 .sceneography {
   padding-top: 30px;
+}
+
+.sceneography .header-text {
+  padding-bottom: 20px;
 }
 
 /* ------------- SPECIAL BEHAVIOR FOR DIFFERENT DISPLAY SIZES --------------- */
@@ -93,6 +106,8 @@
 
   .right-pane {
     width: 75%;
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
 
   .header {
@@ -102,7 +117,7 @@
   }
 
   .header-text {
-    font-size: 1.875em;
+    font-size: 1.5em;
   }
 
   .list-element {
